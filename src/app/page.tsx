@@ -34,19 +34,18 @@ export default function LandingPage() {
         <header className="flex items-center justify-between animate-rise">
           <BrandMark light />
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              className="text-line hover:bg-white/10 hover:text-line"
-              render={<Link href="/login" />}
+            <Link
+              href="/login"
+              className="inline-flex h-8 items-center rounded-lg px-2.5 text-sm font-medium text-line hover:bg-white/10"
             >
               Sign in
-            </Button>
-            <Button
-              className="bg-ball text-court-deep hover:bg-ball/90"
-              render={<Link href="/register" />}
+            </Link>
+            <Link
+              href="/register"
+              className="inline-flex h-8 items-center rounded-lg bg-ball px-2.5 text-sm font-medium text-court-deep hover:bg-ball/90"
             >
               Join Courtlink
-            </Button>
+            </Link>
           </div>
         </header>
 
@@ -62,16 +61,16 @@ export default function LandingPage() {
             turn social connections into real matches.
           </p>
           <div className="animate-rise-delay-2 mt-8 flex flex-wrap items-center gap-3">
-            <Button
-              size="lg"
-              className="h-11 bg-ball px-5 text-base text-court-deep hover:bg-ball/90"
-              render={<Link href="/register" />}
+            <Link
+              href="/register"
+              className="inline-flex h-11 items-center rounded-lg bg-ball px-5 text-base font-medium text-court-deep hover:bg-ball/90"
             >
               Start playing
-            </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
+              type="button"
               className="h-11 border-line/30 bg-transparent px-5 text-base text-line hover:bg-white/10 hover:text-line"
               onClick={() => {
                 login("maya@courtlink.app", "demo1234");
